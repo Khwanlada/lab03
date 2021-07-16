@@ -1,16 +1,18 @@
 <template>
-  <div class="home">
+  <div class="events">
    <EventCard v-for="event in events" :key="event.id" :event="event" />
+   <EventCateOr v-for="event in events" :key="event.id" :event="event" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import EventCard from "@/components/EventCard.vue";
+import EventCateOr from "@/components/cateOr.vue";
 export default {
   name: "Home",
   components: {
-    EventCard, //register it as a child component
+    EventCard,EventCateOr //register it as a child component
   },
   data(){
     return {
@@ -50,6 +52,13 @@ export default {
         }
       ]
     }
-  }
+  },
 };
 </script>
+<style scoped>
+  .events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
