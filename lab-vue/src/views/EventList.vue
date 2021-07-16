@@ -1,4 +1,5 @@
 <template>
+<h1> Event For Good</h1>
   <div class="events">
    <EventCard v-for="event in events" :key="event.id" :event="event" />
    <EventCateOr v-for="event in events" :key="event.id" :event="event" />
@@ -10,7 +11,7 @@
 import EventCard from "@/components/EventCard.vue";
 import EventCateOr from "@/components/cateOr.vue";
 export default {
-  name: "Home",
+  name: "EventList",
   components: {
     EventCard,EventCateOr //register it as a child component
   },
