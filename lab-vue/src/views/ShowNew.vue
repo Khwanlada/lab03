@@ -1,7 +1,7 @@
 <template>
 
   <div class="shownew">
-    <h1>This is an Show3.12 page</h1>
+    <h1>This is a Show3.12 page</h1>
   </div>
   <EventCateOr v-for="event in events" :key="event.id" :event="event" />
 </template>
